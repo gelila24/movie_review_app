@@ -4,7 +4,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:movie_review_app/shared/routes/app_pages.dart';
 import 'package:movie_review_app/shared/routes/app_routes.dart';
 import 'package:movie_review_app/shared/themes/app_theme.dart';
-import 'package:movie_review_app/ui/bindings/auth_binding.dart';
+import 'package:movie_review_app/modules/auth_module/auth_binding.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

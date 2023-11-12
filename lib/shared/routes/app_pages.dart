@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_review_app/shared/routes/app_routes.dart';
-import 'package:movie_review_app/ui/pages/add_movies_page.dart';
-import 'package:movie_review_app/ui/pages/detail_page.dart';
-import 'package:movie_review_app/ui/pages/home_page.dart';
-import 'package:movie_review_app/ui/pages/main_page.dart';
-import 'package:movie_review_app/ui/pages/register_user.dart';
-import 'package:movie_review_app/ui/pages/search_page.dart';
+import 'package:movie_review_app/modules/home_module/pages/add_movies_page.dart';
+import 'package:movie_review_app/modules/home_module/pages/detail_page.dart';
+import 'package:movie_review_app/modules/home_module/pages/home_page.dart';
+import 'package:movie_review_app/modules/home_module/pages/main_page.dart';
+import 'package:movie_review_app/modules/auth_module/pages/register_user.dart';
+import 'package:movie_review_app/modules/home_module/pages/search_page.dart';
 
 abstract class AppPages {
   static final pages = [
