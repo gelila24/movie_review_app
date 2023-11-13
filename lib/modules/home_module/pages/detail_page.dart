@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_review_app/modules/auth_module/auth_controller.dart';
 import 'package:movie_review_app/modules/home_module/pages/add_review.dart';
 import 'package:movie_review_app/shared/themes/app_theme.dart';
 import 'package:movie_review_app/modules/home_module/home_controller.dart';
 import 'package:movie_review_app/widgets/rate_and_review.dart';
+import 'package:movie_review_app/widgets/review_to_signup_sheet.dart';
 
 class DetailPage extends GetWidget<HomeController> {
   const DetailPage({super.key});
@@ -121,10 +123,14 @@ class DetailPage extends GetWidget<HomeController> {
                               ),
                               IconButton(
                                 onPressed: () {
-                                  showDialog(
-                                      context: context,
-                                      builder: (context) =>
-                                          AddRatingAndReview());
+                                  if (Get.find<AuthController>().user != null) {
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) =>
+                                            AddRatingAndReview());
+                                  } else {
+                                    Get.dialog(ReviewToSignupSheet());
+                                  }
                                 },
                                 icon: const Icon(
                                   Icons.reviews,

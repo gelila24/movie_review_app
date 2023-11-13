@@ -43,7 +43,10 @@ class AuthRepository {
   }
 
   UserModel? get user {
-    log(storage.read("user").toString());
-    return _user ?? UserModel.fromJson(storage.read("user"));
+    if (_user == null && storage.hasData("user")) {
+      return UserModel.fromJson(storage.read("user"));
+    } else {
+      return _user;
+    }
   }
 }

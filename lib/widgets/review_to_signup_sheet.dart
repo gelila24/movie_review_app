@@ -42,6 +42,9 @@ class ReviewToSignupSheet extends StatelessWidget {
                 Get.toNamed(Routes.registerUserPage);
                 Get.find<AuthController>().isSigningFromReview = true;
               }),
+          SizedBox(
+            height: 20,
+          )
         ],
       ),
     );
